@@ -1,3 +1,6 @@
+<?php
+	$rand = rand(100000,1000000000);
+?>
 <html>
 	<head>
 		<style>
@@ -11,7 +14,7 @@
 			<?php for($linha=1; $linha<=6; $linha++) : ?>
 			<tr>
 				<?php for($coluna=1; $coluna<=8; $coluna++) : ?>
-				<td><img src="imagens/<?php echo ($linha*8)-8+$coluna ?>.jpg" /></td>
+				<td><img src="/uploads/imagens/<?php echo ($linha*8)-8+$coluna ?>.jpg?rand=<?php echo $rand?>" /></td>
 				<?php endfor; ?>
 			</tr>
 			<?php endfor; ?>

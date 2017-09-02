@@ -1,0 +1,25 @@
+*{
+	font-family: Tahoma, Arial, Sans-serif, Times;
+}
+
+.body{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.row{
+	clear: both;
+}
+
+.body .menu, .body .form{
+	float: left;
+	width: 490px;
+}
+
+.body .menu{
+	background-color: red;
+}
+
+.body .form{
+	background-color: yellow
+}
