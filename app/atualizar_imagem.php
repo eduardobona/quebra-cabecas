@@ -1,23 +1,38 @@
 <?php
 
+include 'constants.php';
+include '../vendor/autoload.php';
+
+use Aws\S3\S3Client;
+
 if (count($_FILES)) {
-	$filename = '../uploads/original/quebracabeca.jpg';
-	move_uploaded_file($_FILES['imagem']['tmp_name'], $filename);
+
+  if (! USE_S3){
+    $filename = '../uploads/original/quebracabeca.jpg';
+    move_uploaded_file($_FILES['imagem']['tmp_name'], $filename);
+  } else {
+    
+    $s3 = new S3Client(array(
+      'credentials' => array(
+        'key' => S3_ACCESS_KEY,
+        'secret' => S3_SECRET_KEY,
+      ),
+      'region' => S3_REGION,
+      'version' => 'latest'
+    ));
+
+    $s3->putObject(array(
+      'Bucket'       => S3_BUCKET,
+      'Key'          => S3_PATH . '/original/quebracabeca.jpg',
+      'SourceFile'   => $_FILES['imagem']['tmp_name'],
+      'ContentType'  => 'image/jpg',
+      'ACL'          => 'public-read'
+    ));
+  }
 
 	include 'gerar_quebracabeca.php';
 
 	header('location: /index.php');
 }
-
-/**
-array (size=1)
-  'imagem' => 
-    array (size=5)
-      'name' => string 'imagens-pinguins.jpg' (length=20)
-      'type' => string 'image/jpeg' (length=10)
-      'tmp_name' => string 'C:\tools\xampp\tmp\phpC7C8.tmp' (length=30)
-      'error' => int 0
-      'size' => int 103598
-*/
 
 ?>
