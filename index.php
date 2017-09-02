@@ -1,7 +1,7 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="/assets/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="http://djzao22pwa9t3.cloudfront.net/assets/css/global.css">
+		<link rel="stylesheet" type="text/css" href="http://djzao22pwa9t3.cloudfront.net/assets/css/normalize.css">
 	</head>
 	<body>
 		<div class="body">

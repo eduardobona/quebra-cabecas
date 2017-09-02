@@ -1,7 +1,7 @@
 <?php
 
-include 'constants.php';
-include '../vendor/autoload.php';
+include_once 'constants.php';
+include_once '../vendor/autoload.php';
 
 use Aws\S3\S3Client;
 
