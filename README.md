@@ -30,3 +30,7 @@ Rodando o projeto no IBM Bluemix:
 	"PHP_EXTENSIONS": ["bz2", "zlib", "curl", "mcrypt", "gd"]
 }
 
+Para rodar APIs com curl ssl (xampp) resolver da seguinte maneira:
+- Baixar o arquivo cacert.pem em https://curl.haxx.se/docs/caextract.html
+- Colocar arquivo em php\extras\ssl
+- Depois colocar no php.ini a configuração curl.cainfo="C:\tools\xampp\php\extras\ssl\cacert.pem"
