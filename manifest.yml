@@ -1,0 +1,4 @@
+ applications:
+ - name: quebra-cabecas-eduardobobona
+   random-route: true
+   memory: 128M

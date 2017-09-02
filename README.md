@@ -22,3 +22,11 @@ Ainda tem a fazer:
 Em um futuro:
 - Criar a versão 2 orientada a objetos para comparação entre as versões
 - Testes automatizados com PHPUnit
+
+Rodando o projeto no IBM Bluemix:
+
+{
+	"PHP_VERSION": "{PHP_70_LATEST}",
+	"PHP_EXTENSIONS": ["bz2", "zlib", "curl", "mcrypt", "gd"]
+}
+
